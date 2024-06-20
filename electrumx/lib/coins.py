@@ -1267,6 +1267,9 @@ class Pepecoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH = ('37981c0c48b8d48965376c8a42ece9a0'
                     '838daadb93ff975cb091f57f8c2a5faa')
+    PEERS = [
+        'mainnet.pepeblocks.com t50001 s50002',
+    ]
     TX_COUNT = 121100
     TX_COUNT_HEIGHT = 86777
     TX_PER_BLOCK = 20
