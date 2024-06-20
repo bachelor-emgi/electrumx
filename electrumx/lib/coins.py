@@ -1256,6 +1256,22 @@ class NamecoinRegtest(NamecoinTestnet):
     TX_COUNT_HEIGHT = 1
     NAME_EXPIRATION = 30
 
+class Pepecoin(AuxPowMixin, Coin):
+    NAME = "Pepecoin"
+    SHORTNAME = "PEPE"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("02facafd")
+    XPRV_VERBYTES = bytes.fromhex("02fac398")
+    P2PKH_VERBYTE = bytes.fromhex("38")
+    P2SH_VERBYTES = (bytes.fromhex("16"),)
+    WIF_BYTE = bytes.fromhex("9e")
+    GENESIS_HASH = ('37981c0c48b8d48965376c8a42ece9a0'
+                    '838daadb93ff975cb091f57f8c2a5faa')
+    TX_COUNT = 121100
+    TX_COUNT_HEIGHT = 86777
+    TX_PER_BLOCK = 20
+    REORG_LIMIT = 2000
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 
 class Dogecoin(AuxPowMixin, Coin):
     NAME = "Dogecoin"
